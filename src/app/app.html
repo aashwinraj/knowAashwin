@@ -1,0 +1,162 @@
+<div class="ambient-bg" aria-hidden="true">
+  <span class="orb orb-one"></span>
+  <span class="orb orb-two"></span>
+  <span class="orb orb-three"></span>
+</div>
+
+<main class="portfolio-shell">
+  <header class="top-nav">
+    <a class="monogram" href="#about" aria-label="Jump to about section">AR</a>
+
+    <nav class="nav-links" aria-label="Primary">
+      @for (link of navLinks; track link.href) {
+        <a [href]="link.href">{{ link.label }}</a>
+      }
+    </nav>
+
+    <div class="nav-actions">
+      <a class="ghost-btn" href="/Resume_AashwinRaj.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+      <a class="connect-btn" [href]="'mailto:' + profile.email" (click)="onContactClick($event)">{{ contactButtonText }}</a>
+    </div>
+  </header>
+
+  <section class="hero section" id="about">
+    <div class="hero-copy">
+      <p class="eyebrow">{{ profile.role }}</p>
+      <h1>Hi, I am {{ profile.name }}.</h1>
+      <p class="lead">{{ aboutLead }}</p>
+
+      @for (paragraph of aboutParagraphs; track paragraph) {
+        <p class="body-copy">{{ paragraph }}</p>
+      }
+
+      <div class="meta-row">
+        <span>{{ profile.location }}</span>
+        <span>{{ profile.email }}</span>
+        <span>{{ profile.phone }}</span>
+      </div>
+
+      <div class="social-row">
+        @for (social of socials; track social.label) {
+          <a [href]="social.href" target="_blank" rel="noopener noreferrer">
+            <span>{{ social.label }}</span>
+            <small>{{ social.value }}</small>
+          </a>
+        }
+      </div>
+    </div>
+
+    <aside class="hero-stats panel" aria-label="Career highlights">
+      <p class="panel-title">Career Highlights</p>
+
+      <div class="stats-grid">
+        @for (stat of quickStats; track stat.label) {
+          <article class="stat-item">
+            <p class="stat-value">{{ stat.value }}</p>
+            <p class="stat-label">{{ stat.label }}</p>
+          </article>
+        }
+      </div>
+    </aside>
+  </section>
+
+  <section class="section" id="skills">
+    <div class="section-header">
+      <p class="section-kicker">Core Strengths</p>
+      <h2>Skills</h2>
+    </div>
+
+    <div class="skills-grid">
+      @for (group of skillGroups; track group.title) {
+        <article class="panel skill-card">
+          <h3>{{ group.title }}</h3>
+
+          <div class="skill-list">
+            @for (skill of group.skills; track skill.name) {
+              <div class="skill-row">
+                <div class="skill-head">
+                  <span>{{ skill.name }}</span>
+                  
+                </div>
+                <div class="skill-meter">
+                  <span [style.width.%]="skill.proficiency"></span>
+                </div>
+              </div>
+            }
+          </div>
+        </article>
+      }
+    </div>
+  </section>
+
+  <section class="section" id="experience">
+    <div class="section-header">
+      <p class="section-kicker">Professional Journey</p>
+      <h2>Experience</h2>
+    </div>
+
+    <div class="timeline">
+      @for (item of experiences; track item.company + item.period) {
+        <article class="panel experience-card">
+          <div class="experience-top">
+            <div>
+              <h3>{{ item.role }}</h3>
+              <p class="company">{{ item.company }}</p>
+            </div>
+            <div class="period-block">
+              <p>{{ item.period }}</p>
+              <p>{{ item.location }}</p>
+            </div>
+          </div>
+
+          <ul>
+            @for (point of item.highlights; track point) {
+              <li>{{ point }}</li>
+            }
+          </ul>
+
+          <div class="tag-row">
+            @for (tag of item.tags; track tag) {
+              <span>{{ tag }}</span>
+            }
+          </div>
+        </article>
+      }
+    </div>
+  </section>
+
+  <section class="section" id="projects">
+    <div class="section-header">
+      <p class="section-kicker">Selected Work</p>
+      <h2>Projects</h2>
+    </div>
+
+    <div class="projects-grid">
+      @for (project of projects; track project.title) {
+        <article class="panel project-card">
+          <h3>{{ project.title }}</h3>
+          <p class="project-description">{{ project.description }}</p>
+
+          <ul>
+            @for (point of project.highlights; track point) {
+              <li>{{ point }}</li>
+            }
+          </ul>
+
+          <div class="tag-row">
+            @for (tool of project.tech; track tool) {
+              <span>{{ tool }}</span>
+            }
+          </div>
+
+          <a class="project-link" [href]="project.link" target="_blank" rel="noopener noreferrer">
+            View project
+          </a>
+        </article>
+      }
+    </div>
+  </section>
+
+  <footer class="footer">Built with Angular and customized from your resume profile.</footer>
+</main>
+
