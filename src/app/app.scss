@@ -102,7 +102,7 @@
 
 .nav-links a {
   border-radius: 999px;
-  color: var(--ink-700);
+  color: #f7fff9;
   font-size: 0.93rem;
   font-weight: 600;
   padding: 0.55rem 0.95rem;
@@ -159,7 +159,7 @@
 }
 
 .lead {
-  color: var(--ink-700);
+  color: #f7fff9;
   font-size: 1.06rem;
   margin-top: 1rem;
   max-width: 60ch;
@@ -173,7 +173,7 @@
 }
 
 .meta-row {
-  color: var(--ink-700);
+  color: #f7fff9;
   display: flex;
   flex-wrap: wrap;
   font-size: 0.9rem;
@@ -200,7 +200,7 @@
   background: #031008;
   border: 1px solid var(--border);
   border-radius: 12px;
-  color: var(--ink-700);
+  color: #f7fff9;
   display: inline-flex;
   gap: 0.4rem;
   padding: 0.46rem 0.72rem;
@@ -233,7 +233,7 @@
 }
 
 .panel-title {
-  color: var(--ink-700);
+  color: #f7fff9;
   font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -388,7 +388,7 @@
 
 .experience-card ul,
 .project-card ul {
-  color: var(--ink-700);
+  color: #f7fff9;
   margin-top: 0.9rem;
   padding-left: 1.1rem;
 }
@@ -399,6 +399,11 @@
   margin-bottom: 0.45rem;
 }
 
+
+.experience-card li::marker,
+.project-card li::marker {
+  color: #f7fff9;
+}
 .tag-row {
   display: flex;
   flex-wrap: wrap;
@@ -410,7 +415,7 @@
   background: linear-gradient(115deg, #0f1c14, #112417);
   border: 1px solid rgba(62, 101, 74, 0.95);
   border-radius: 999px;
-  color: var(--ink-700);
+  color: #f7fff9;
   font-size: 0.78rem;
   font-weight: 600;
   letter-spacing: 0.01em;
@@ -545,7 +550,7 @@
   background: rgba(10, 18, 13, 0.75);
   border: 1px solid var(--border);
   border-radius: 999px;
-  color: var(--ink-700);
+  color: #f7fff9;
   font-size: 0.9rem;
   font-weight: 700;
   padding: 0.6rem 1rem;
@@ -569,6 +574,5 @@
     text-align: center;
   }
 }
-
 
 
