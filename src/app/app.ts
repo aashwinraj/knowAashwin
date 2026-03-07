@@ -74,8 +74,8 @@ export class App {
   ];
 
   readonly quickStats: Stat[] = [
-    { value: '2.9 years', label: 'Software engineering at GEP.' },
-    { value: '30+', label: 'Clients using the sytem I help build.' },
+    { value: '2.9 years', label: 'of Software engineering at GEP.' },
+    { value: '30+', label: 'Clients using the systems I help build.' },
     { value: '70+', label: 'Features developed and delivered.' }
   ];
 
