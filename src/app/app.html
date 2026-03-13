@@ -88,6 +88,38 @@
     </div>
   </section>
 
+  <section class="section" id="projects">
+    <div class="section-header">
+      <p class="section-kicker">Selected Work</p>
+      <h2>Projects</h2>
+    </div>
+
+    <div class="projects-grid">
+      @for (project of projects; track project.title) {
+        <article class="panel project-card">
+          <h3>{{ project.title }}</h3>
+          <p class="project-description">{{ project.description }}</p>
+
+          <ul>
+            @for (point of project.highlights; track point) {
+              <li>{{ point }}</li>
+            }
+          </ul>
+
+          <div class="tag-row">
+            @for (tool of project.tech; track tool) {
+              <span>{{ tool }}</span>
+            }
+          </div>
+
+          <a class="project-link" [href]="project.link" target="_blank" rel="noopener noreferrer">
+            View project
+          </a>
+        </article>
+      }
+    </div>
+  </section>
+
   <section class="section" id="experience">
     <div class="section-header">
       <p class="section-kicker">Professional Journey</p>
@@ -124,37 +156,4 @@
     </div>
   </section>
 
-  <section class="section" id="projects">
-    <div class="section-header">
-      <p class="section-kicker">Selected Work</p>
-      <h2>Projects</h2>
-    </div>
-
-    <div class="projects-grid">
-      @for (project of projects; track project.title) {
-        <article class="panel project-card">
-          <h3>{{ project.title }}</h3>
-          <p class="project-description">{{ project.description }}</p>
-
-          <ul>
-            @for (point of project.highlights; track point) {
-              <li>{{ point }}</li>
-            }
-          </ul>
-
-          <div class="tag-row">
-            @for (tool of project.tech; track tool) {
-              <span>{{ tool }}</span>
-            }
-          </div>
-
-          <a class="project-link" [href]="project.link" target="_blank" rel="noopener noreferrer">
-            View project
-          </a>
-        </article>
-      }
-    </div>
-  </section>
-
 </main>
-

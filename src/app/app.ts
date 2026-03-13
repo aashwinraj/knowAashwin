@@ -63,8 +63,8 @@ export class App {
   readonly navLinks: NavLink[] = [
     { label: 'About', href: '#about' },
     { label: 'Skills', href: '#skills' },
-    { label: 'Experience', href: '#experience' },
-    { label: 'Projects', href: '#projects' }
+    { label: 'Projects', href: '#projects' },
+    { label: 'Experience', href: '#experience' }
   ];
 
   readonly socials: SocialLink[] = [
@@ -144,6 +144,30 @@ export class App {
   ];
 
   readonly projects: Project[] = [
+    {
+      title: 'RL Fine-Tuned Qwen 2.5 0.5B',
+      description:
+        'Fine-tuned Qwen 2.5 0.5B with reinforcement learning using GRPO to improve response behavior beyond standard supervised tuning.',
+      highlights: [
+        'Built a GRPO-based reinforcement learning workflow around a compact Qwen 2.5B-class language model.',
+        'Combined notebook-driven experimentation with a standalone training script for repeatable RL fine-tuning runs.',
+        'Focused on practical post-training improvements for instruction-following and response quality.'
+      ],
+      tech: ['Python', 'GRPO', 'LLM Fine-Tuning', 'Reinforcement Learning'],
+      link: 'https://github.com/aashwinraj/RL-fine-tuned-Qwen-2.5-0.5B'
+    },
+    {
+      title: 'RL LunarLander',
+      description:
+        'Implemented reinforcement learning agents for Gymnasium environments, including a PPO solution for LunarLander-v3 and supporting training analysis.',
+      highlights: [
+        'Implemented PPO from scratch in PyTorch to solve the LunarLander-v3 environment.',
+        'Included DQL experiments, training logs, and plotting notebooks to compare learning behavior over time.',
+        'Extended the repo with additional environment experimentation and visual outputs for agent learning.'
+      ],
+      tech: ['Python', 'PyTorch', 'PPO', 'Gymnasium'],
+      link: 'https://github.com/aashwinraj/RL-LunarLander'
+    },
     {
       title: 'Vision Transformer for Gaussian Image Denoising',
       description:
