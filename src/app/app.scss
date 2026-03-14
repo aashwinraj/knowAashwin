@@ -437,6 +437,21 @@
   transform: translateY(-5px);
 }
 
+.project-image-wrap {
+  background: #08100b;
+  border: 1px solid rgba(62, 101, 74, 0.95);
+  border-radius: 14px;
+  margin-bottom: 0.95rem;
+  overflow: hidden;
+}
+
+.project-image {
+  display: block;
+  height: 180px;
+  object-fit: cover;
+  width: 100%;
+}
+
 .project-description {
   color: var(--ink-500);
   line-height: 1.55;

@@ -97,6 +97,9 @@
     <div class="projects-grid">
       @for (project of projects; track project.title) {
         <article class="panel project-card">
+          <div class="project-image-wrap">
+            <img class="project-image" [src]="project.image" [alt]="project.title" loading="lazy" />
+          </div>
           <h3>{{ project.title }}</h3>
           <p class="project-description">{{ project.description }}</p>
 

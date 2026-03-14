@@ -41,6 +41,7 @@ interface Project {
   highlights: string[];
   tech: string[];
   link: string;
+  image: string;
 }
 
 @Component({
@@ -154,7 +155,8 @@ export class App {
         'Focused on practical post-training improvements for instruction-following and response quality.'
       ],
       tech: ['Python', 'GRPO', 'LLM Fine-Tuning', 'Reinforcement Learning'],
-      link: 'https://github.com/aashwinraj/RL-fine-tuned-Qwen-2.5-0.5B'
+      link: 'https://github.com/aashwinraj/RL-fine-tuned-Qwen-2.5-0.5B',
+      image: 'https://opengraph.githubassets.com/1/aashwinraj/RL-fine-tuned-Qwen-2.5-0.5B'
     },
     {
       title: 'RL LunarLander',
@@ -166,7 +168,8 @@ export class App {
         'Extended the repo with additional environment experimentation and visual outputs for agent learning.'
       ],
       tech: ['Python', 'PyTorch', 'PPO', 'Gymnasium'],
-      link: 'https://github.com/aashwinraj/RL-LunarLander'
+      link: 'https://github.com/aashwinraj/RL-LunarLander',
+      image: 'https://github.com/user-attachments/assets/c5946fbe-6dc5-4e0a-b31f-3f35a971d4f3'
     },
     {
       title: 'Vision Transformer for Gaussian Image Denoising',
@@ -178,7 +181,8 @@ export class App {
         'Used PSNR-based evaluation to measure quality improvements across test samples.'
       ],
       tech: ['Python', 'PyTorch', 'FastAPI', 'Computer Vision'],
-      link: 'https://github.com/aashwinraj/Transformer-Denoizer'
+      link: 'https://github.com/aashwinraj/Transformer-Denoizer',
+      image: 'https://github.com/user-attachments/assets/6ed9d27c-1413-4dec-a8e3-b847d6dd71b8'
     },
     {
       title: 'Causal FlashAttention (CUDA Research Implementation)',
@@ -190,7 +194,8 @@ export class App {
         'Verified correctness against an FP32 CPU reference with very low numerical error.'
       ],
       tech: ['CUDA', 'C++', 'Attention', 'LLM Systems'],
-      link: 'https://github.com/aashwinraj/Cuda-Kernels'
+      link: 'https://github.com/aashwinraj/Cuda-Kernels',
+      image: 'https://opengraph.githubassets.com/1/aashwinraj/Cuda-Kernels'
     },
     {
       title: 'Multimodal Product Search Engine (Image + Text)',
@@ -202,7 +207,8 @@ export class App {
         'Improved retrieval quality via contrastive embeddings and structured metadata enrichment.'
       ],
       tech: ['Python', 'CLIP', 'FAISS', 'FastAPI'],
-      link: 'https://github.com/aashwinraj/Multi-Modal-AI-search'
+      link: 'https://github.com/aashwinraj/Multi-Modal-AI-search',
+      image: 'https://github.com/user-attachments/assets/79ff89da-390e-43bf-8065-213ac32f78be'
     }
   ];
   async onContactClick(event: MouseEvent): Promise<void> {
