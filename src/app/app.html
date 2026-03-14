@@ -59,35 +59,6 @@
     </aside>
   </section>
 
-  <section class="section" id="skills">
-    <div class="section-header">
-      <p class="section-kicker">Core Strengths</p>
-      <h2>Skills</h2>
-    </div>
-
-    <div class="skills-grid">
-      @for (group of skillGroups; track group.title) {
-        <article class="panel skill-card">
-          <h3>{{ group.title }}</h3>
-
-          <div class="skill-list">
-            @for (skill of group.skills; track skill.name) {
-              <div class="skill-row">
-                <div class="skill-head">
-                  <span>{{ skill.name }}</span>
-                  
-                </div>
-                <div class="skill-meter">
-                  <span [style.width.%]="skill.proficiency"></span>
-                </div>
-              </div>
-            }
-          </div>
-        </article>
-      }
-    </div>
-  </section>
-
   <section class="section" id="projects">
     <div class="section-header">
       <p class="section-kicker">Selected Work</p>
@@ -118,6 +89,34 @@
           <a class="project-link" [href]="project.link" target="_blank" rel="noopener noreferrer">
             View project
           </a>
+        </article>
+      }
+    </div>
+  </section>
+
+  <section class="section" id="skills">
+    <div class="section-header">
+      <p class="section-kicker">Core Strengths</p>
+      <h2>Skills</h2>
+    </div>
+
+    <div class="skills-grid">
+      @for (group of skillGroups; track group.title) {
+        <article class="panel skill-card">
+          <h3>{{ group.title }}</h3>
+
+          <div class="skill-list">
+            @for (skill of group.skills; track skill.name) {
+              <div class="skill-row">
+                <div class="skill-head">
+                  <span>{{ skill.name }}</span>
+                </div>
+                <div class="skill-meter">
+                  <span [style.width.%]="skill.proficiency"></span>
+                </div>
+              </div>
+            }
+          </div>
         </article>
       }
     </div>
