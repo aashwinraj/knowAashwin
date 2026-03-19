@@ -1,4 +1,4 @@
-name: Deploy Anniversary Site to GitHub Pages
+name: Deploy Portfolio to GitHub Pages
 
 on:
   push:
@@ -26,11 +26,11 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build React app for Pages
-        run: npm run build
+      - name: Build Angular app for Pages
+        run: npm run build -- --configuration production --base-href "/knowAashwin/"
 
       - name: Deploy to gh-pages branch
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: dist
+          publish_dir: dist/portfolio-site/browser
