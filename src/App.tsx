@@ -229,7 +229,7 @@ function App() {
           <p>moments where my heart quietly whispered, &quot;Yep, it&apos;s still you.&quot;</p>
         </article>
         <article className="panel stat-card">
-          <span>Always</span>
+          <span>∞</span>
           <p>kisses, cuddles, soft looks, and reasons to keep choosing this love every day.</p>
         </article>
         <article className="panel stat-card">
